@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skibidi Website</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Skibidi Dev</h1>
+    </main>
+  </body>
+  <script>
+    "use strict";
+
+    const heading = document.querySelector("h1");
+    const body = document.body;
+
+    setInterval(() => {
+      const randColor1 = Math.floor(Math.random() * 16777215).toString(16);
+      const randColor2 = Math.floor(Math.random() * 16777215).toString(16);
+      const randColor3 = Math.floor(Math.random() * 16777215).toString(16);
+
+      heading.setAttribute("style", `background-color: #${randColor1};color: #${randColor2};`);
+      body.setAttribute("style", `background-color: #${randColor3};`);
+    }, 100);
+  </script>
+</html>
