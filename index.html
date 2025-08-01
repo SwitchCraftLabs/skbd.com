@@ -39,13 +39,15 @@
   <script>
     "use strict";
 
+    const COLOR_SPACE = 16777215;
+
     const heading = document.querySelector("h1");
     const body = document.body;
 
     setInterval(() => {
-      const randColor1 = Math.floor(Math.random() * 16777215).toString(16);
-      const randColor2 = Math.floor(Math.random() * 16777215).toString(16);
-      const randColor3 = Math.floor(Math.random() * 16777215).toString(16);
+      const randColor1 = Math.floor(Math.random() * COLOR_SPACE).toString(16);
+      const randColor2 = Math.floor(Math.random() * COLOR_SPACE).toString(16);
+      const randColor3 = Math.floor(Math.random() * COLOR_SPACE).toString(16);
 
       heading.setAttribute("style", `background-color: #${randColor1};color: #${randColor2};`);
       body.setAttribute("style", `background-color: #${randColor3};`);
